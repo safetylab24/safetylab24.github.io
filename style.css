@@ -3,7 +3,7 @@
     --primary-background: #191819;
     --secondary-background: #373437;
     --primary-text: #ebeaea;
-    --secondary-text: #7180ac;
+    --secondary-text: #bfbebe;
     --yellow: #f3cd8d;
     --orange: #eb8d28;
     --umbra: #8d321d;
@@ -51,7 +51,7 @@ img {
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, opacity 0.2s ease-out;
+    transition: width 0.2s ease-out, height 0.2s ease-out, opacity 0.2s ease-out;
     z-index: 9998;
     background-image: linear-gradient(135deg, var(--yellow) 0%, var(--umbra) 100%);
     box-shadow: 1px 1px 5px 2px var(--black);
@@ -66,7 +66,7 @@ img {
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, opacity 0.2s ease-out;
+    transition: width 0.2s ease-out, height 0.2s ease-out, opacity 0.2s ease-out;
     z-index: 9999;
     background-image: linear-gradient(135deg, var(--dark-umbra) 0%, var(--black) 100%);
 }
@@ -265,7 +265,7 @@ footer {
 }
 
 #email-text {
-    transition: color 0.1s ease; /* Smooth transition */
+    transition: color 0.3s ease; /* Smooth transition */
 }
 
 
