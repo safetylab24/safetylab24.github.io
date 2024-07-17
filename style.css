@@ -263,3 +263,17 @@ footer {
     min-height: 42vh;
     text-align: center;
 }
+
+#email-text {
+    transition: color 0.1s ease; /* Smooth transition */
+}
+
+
+#email-text:hover {
+    color: white;
+}
+
+
+#email-text:not(:hover) {
+    color: var(--secondary-text);
+}
