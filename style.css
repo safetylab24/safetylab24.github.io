@@ -264,16 +264,19 @@ footer {
     text-align: center;
 }
 
-#email-text {
+.hover-text {
     transition: color 0.3s ease; /* Smooth transition */
 }
 
-
-#email-text:hover {
+.hover-text:hover {
     color: white;
 }
 
 
-#email-text:not(:hover) {
+.hover-text:not(:hover) {
     color: var(--secondary-text);
+}
+
+#nav-email {
+    padding-left: 20vw;
 }
