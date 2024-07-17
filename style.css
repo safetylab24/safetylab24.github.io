@@ -46,12 +46,12 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    opacity: 80%;
+    opacity: 100%;
     backdrop-filter: blur(6px);
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, opacity 0.2s ease-out;
     z-index: 9998;
     background-image: linear-gradient(135deg, var(--yellow) 0%, var(--umbra) 100%);
     box-shadow: 1px 1px 5px 2px var(--black);
@@ -61,12 +61,12 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    opacity: 80%;
+    opacity: 100%;
     backdrop-filter: blur(6px);
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, opacity 0.2s ease-out;
     z-index: 9999;
     background-image: linear-gradient(135deg, var(--dark-umbra) 0%, var(--black) 100%);
 }
@@ -199,7 +199,7 @@ footer {
 #bev-border {
     height: 100%;
     width: 33%;
-    margin: 0 0 0 21.5vw;
+    margin: 0 0 0 21.9vw;
     padding: 0.25%;
 }
 
