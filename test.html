@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy to Clipboard Example</title>
+    <style>
+        #copy-text {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="display-text">Contact Us</p>
+    <span id="copy-text" style="display: none;">safetylab24@gmail.com</span>
+    <button id="copy-button">Copy Email</button>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const copyToClipboard = str => {
+                if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
+                    return navigator.clipboard.writeText(str);
+                }
+                return Promise.reject('The Clipboard API is not available.');
+            };
+
+            const copyTextElement = document.getElementById('copy-text');
+            const copyButton = document.getElementById('copy-button');
+
+            if (copyTextElement && copyButton) {
+                copyButton.addEventListener('click', () => {
+                    const textToCopy = copyTextElement.textContent.trim();
+                    copyToClipboard(textToCopy).then(() => {
+                        alert('Email copied to clipboard: ' + textToCopy);
+                        console.log('Email copied to clipboard:', textToCopy);
+                    }).catch(err => {
+                        console.error('Failed to copy email to clipboard:', err);
+                    });
+                });
+            } else {
+                console.error('Elements not found.');
+            }
+        });
+    </script>
+</body>
+
+</html>

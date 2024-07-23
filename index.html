@@ -1,11 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="Viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy to Clipboard Example</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -13,15 +14,16 @@
     <div class="custom-cursor"></div>
 
     <nav>
-        <a href="index.html" class="logo" id="email-text" class="hover-text">Cross-View Centerpoint</a>
+        <a href="index.html" class="logo hover-text">Cross-View Centerpoint</a>
         <div class="nav-items">
-            <a href="https://github.com/safetylab24/CVCP" id="email-text" class="hover-text">See the Code</a>
+            <a id="github-link" href="https://github.com/safetylab24/CVCP"><span class="hover-text">See the
+                    Code</span></a>
         </div>
         <div class="nav-items">
-            <a href="about.html" id="email-text" class="hover-text">About</a>
+            <a href="about.html" class="hover-text">About</a>
         </div>
         <div class="nav-items">
-            <span id="nav-email" class="hover-text">Contact Us: safetylab24@gmail.com</span>
+            <button id="copy-text"><span class="hover-text">Contact Us</span></button>
         </div>
     </nav>
 
@@ -30,24 +32,29 @@
     </section>
 
     <section class="cards">
-        <div class="card-border-wrap">
+        <div class="card-border-wrap" id="camera-views">
             <div class="card">
-                <img src="images/138LEFTFRONT.png" alt="Front Left View">
-                <img src="images/138FRONT.png" alt="Front View">
-                <img src="images/138RIGHTFRONT.png" alt="Front Right View">
-                <img src="images/138RIGHTBACK.png" alt="Back Right View">
-                <img src="images/138BACK.png" alt="Back View">
-                <img src="images/138LEFTBACK.png" alt="Back Left View">
+                <img src="images/emptyView/front-left.png" id="front-left" alt="Front Left View">
+                <img src="images/emptyView/front.png" id="front" alt="Front View">
+                <img src="images/emptyView/front-right.png" id="front-right" alt="Front Right View">
+                <img src="images/emptyView/back-right.png" id="back-right" alt="Back Right View">
+                <img src="images/emptyView/back.png" id="back" alt="Back View">
+                <img src="images/emptyView/back-left.png" id="back-left" alt="Back Left View">
             </div>
         </div>
         <div class="card-border-wrap" id="bev-border">
             <div class="card" id="bev">
-                <!-- <img src="images/138BEVLABEL.png" class="" id="bev-image" alt="BEV Label"> -->
+                <img src="images/bev.png" id="bev-image" alt="BEV Label">
                 <div class="keypoint" id="keypoint1"></div>
                 <div class="keypoint" id="keypoint2"></div>
+                <div class="keypoint" id="keypoint3"></div>
+                <div class="keypoint" id="keypoint4"></div>
             </div>
         </div>
     </section>
+
+    <img src="images/arrow.png" id="arrow-image">
+    <a id="arrow-text">Hover on keypoints to view the attention maps</a>
 
     <footer></footer>
 </body>
